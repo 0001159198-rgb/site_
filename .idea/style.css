@@ -1,0 +1,249 @@
+/* Estilo geral da página */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background-color:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Cabeçalho */
+header{
+    background-color:#1f3c88;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Menu */
+nav ul{
+    list-style:none;
+    padding:0;
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    padding:8px 14px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+/* Hover nos links */
+nav a:hover{
+    background-color:#4a69bd;
+}
+
+/* Conteúdo principal */
+main{
+    width:80%;
+    margin:auto;
+    padding:20px;
+}
+
+/* Seções */
+section{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:8px;
+    box-shadow:0px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Artigo */
+article{
+    background:#f9f9f9;
+    padding:15px;
+    margin-top:10px;
+    border-left:5px solid #1f3c88;
+    border-radius:5px;
+}
+
+/* Imagem */
+img{
+    display:block;
+    margin:auto;
+    margin-top:15px;
+    max-width:100%;
+    border-radius:10px;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Tabela */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    padding:10px;
+    border:1px solid #ccc;
+}
+
+th{
+    background:#1f3c88;
+    color:white;
+}
+
+/* Vídeo */
+iframe{
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+/* Botões */
+button{
+    background:#1f3c88;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#4a69bd;
+}
+
+/* ================= FORMULÁRIO ================= */
+
+/* Centralizar formulário */
+form{
+    max-width:700px;
+    margin:auto;
+    margin-top:15px;
+}
+
+/* Agrupamento */
+fieldset{
+    border:2px solid #1f3c88;
+    border-radius:8px;
+    padding:15px;
+    margin-bottom:15px;
+}
+
+/* Título do grupo */
+legend{
+    font-weight:bold;
+    color:#1f3c88;
+    padding:0 10px;
+}
+
+/* Labels */
+label{
+    font-weight:bold;
+}
+
+/* Inputs, textarea e select ajustados */
+input, textarea, select{
+    width:100%;
+    max-width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box; /* 🔥 corrige o tamanho */
+    transition:0.3s;
+}
+
+/* Efeito ao clicar */
+input:focus, textarea:focus, select:focus{
+    border-color:#1f3c88;
+    outline:none;
+    box-shadow:0 0 5px rgba(31,60,136,0.5);
+}
+
+/* Altura dos inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"]{
+    height:40px;
+}
+
+/* Textarea */
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+/* Radio e checkbox */
+input[type="radio"],
+input[type="checkbox"]{
+    width:auto;
+    margin-right:5px;
+}
+
+/* Botões do formulário */
+form button{
+    margin-top:10px;
+    margin-right:10px;
+}
+
+/* Botão reset */
+button[type="reset"]{
+    background:#999;
+}
+
+button[type="reset"]:hover{
+    background:#777;
+}
+
+/* Rodapé */
+footer{
+    background:#1f3c88;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ================= DARK MODE ================= */
+
+.dark{
+    background-color:#121212;
+    color:white;
+}
+
+.dark section{
+    background:#1e1e1e;
+}
+
+.dark header{
+    background:#000;
+}
+
+.dark footer{
+    background:#000;
+}
+
+/* Artigo no modo escuro */
+.dark article{
+    background:#2a2a2a;
+    border-left-color:#bb86fc;
+    color:#f0f0f0;
+}
+
+/* Formulário no dark mode */
+.dark fieldset{
+    border-color:#bb86fc;
+}
+
+.dark legend{
+    color:#bb86fc;
+}
+
+.dark input,
+.dark textarea,
+.dark select{
+    background:#2a2a2a;
+    color:white;
+    border:1px solid #555;
+}
