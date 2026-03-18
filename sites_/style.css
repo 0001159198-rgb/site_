@@ -1,4 +1,4 @@
-/* Estilo geral da página */
+/* ================= ESTILO GERAL ================= */
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin:0;
@@ -7,7 +7,7 @@ body{
     line-height:1.6;
 }
 
-/* Cabeçalho */
+/* ================= CABEÇALHO ================= */
 header{
     background-color:#1f3c88;
     color:white;
@@ -15,7 +15,7 @@ header{
     padding:20px;
 }
 
-/* Menu */
+/* ================= MENU ================= */
 nav ul{
     list-style:none;
     padding:0;
@@ -33,19 +33,19 @@ nav a{
     transition:0.3s;
 }
 
-/* Hover nos links */
+/* Hover */
 nav a:hover{
     background-color:#4a69bd;
 }
 
-/* Conteúdo principal */
+/* ================= CONTEÚDO ================= */
 main{
     width:80%;
     margin:auto;
     padding:20px;
 }
 
-/* Seções */
+/* ================= SEÇÕES ================= */
 section{
     background:white;
     padding:20px;
@@ -54,7 +54,7 @@ section{
     box-shadow:0px 2px 6px rgba(0,0,0,0.2);
 }
 
-/* Artigo */
+/* ================= ARTIGO ================= */
 article{
     background:#f9f9f9;
     padding:15px;
@@ -63,7 +63,7 @@ article{
     border-radius:5px;
 }
 
-/* Imagem */
+/* ================= IMAGEM ================= */
 img{
     display:block;
     margin:auto;
@@ -73,7 +73,7 @@ img{
     box-shadow:0px 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Tabela */
+/* ================= TABELA ================= */
 table{
     width:100%;
     border-collapse:collapse;
@@ -89,14 +89,15 @@ th{
     color:white;
 }
 
-/* Vídeo */
+/* ================= VÍDEO ================= */
 iframe{
     display:block;
     margin:auto;
     border-radius:8px;
+    max-width:100%;
 }
 
-/* Botões */
+/* ================= BOTÕES ================= */
 button{
     background:#1f3c88;
     color:white;
@@ -112,15 +113,12 @@ button:hover{
 }
 
 /* ================= FORMULÁRIO ================= */
-
-/* Centralizar formulário */
 form{
     max-width:700px;
     margin:auto;
     margin-top:15px;
 }
 
-/* Agrupamento */
 fieldset{
     border:2px solid #1f3c88;
     border-radius:8px;
@@ -128,19 +126,17 @@ fieldset{
     margin-bottom:15px;
 }
 
-/* Título do grupo */
 legend{
     font-weight:bold;
     color:#1f3c88;
     padding:0 10px;
 }
 
-/* Labels */
 label{
     font-weight:bold;
 }
 
-/* Inputs, textarea e select ajustados */
+/* Inputs */
 input, textarea, select{
     width:100%;
     max-width:100%;
@@ -149,24 +145,35 @@ input, textarea, select{
     margin-bottom:15px;
     border:1px solid #ccc;
     border-radius:5px;
-    box-sizing:border-box; /* 🔥 corrige o tamanho */
+    box-sizing:border-box;
     transition:0.3s;
 }
 
-/* Efeito ao clicar */
+/* Foco */
 input:focus, textarea:focus, select:focus{
     border-color:#1f3c88;
     outline:none;
     box-shadow:0 0 5px rgba(31,60,136,0.5);
 }
 
-/* Altura dos inputs */
+/* Altura padrão */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="password"],
 input[type="date"]{
     height:40px;
+}
+
+/* 🔥 Destaque especial para CEP */
+input#cep{
+    border:2px solid #4a69bd;
+}
+
+/* Campos preenchidos automaticamente */
+input[readonly]{
+    background:#e9ecef;
+    font-weight:bold;
 }
 
 /* Textarea */
@@ -188,7 +195,7 @@ form button{
     margin-right:10px;
 }
 
-/* Botão reset */
+/* Reset */
 button[type="reset"]{
     background:#999;
 }
@@ -197,7 +204,7 @@ button[type="reset"]:hover{
     background:#777;
 }
 
-/* Rodapé */
+/* ================= RODAPÉ ================= */
 footer{
     background:#1f3c88;
     color:white;
@@ -206,7 +213,6 @@ footer{
 }
 
 /* ================= DARK MODE ================= */
-
 .dark{
     background-color:#121212;
     color:white;
@@ -216,22 +222,19 @@ footer{
     background:#1e1e1e;
 }
 
-.dark header{
-    background:#000;
-}
-
+.dark header,
 .dark footer{
     background:#000;
 }
 
-/* Artigo no modo escuro */
+/* Artigo */
 .dark article{
     background:#2a2a2a;
     border-left-color:#bb86fc;
     color:#f0f0f0;
 }
 
-/* Formulário no dark mode */
+/* Form */
 .dark fieldset{
     border-color:#bb86fc;
 }
@@ -246,4 +249,21 @@ footer{
     background:#2a2a2a;
     color:white;
     border:1px solid #555;
+}
+
+/* ================= RESPONSIVO ================= */
+@media(max-width:768px){
+    main{
+        width:95%;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    iframe{
+        width:100%;
+        height:auto;
+    }
 }
